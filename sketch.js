@@ -5,7 +5,6 @@ anywhere they choose, which will spawn a random house wherever their mouse is.
 let homes = [];
 var ground;
 var aspect;
-var desiredImageSize = 600;
 
 function preload () {
   ground = loadImage ('ground1.png');
@@ -19,10 +18,10 @@ function preload () {
 function setup() {
   aspect = ground.width/ground.height;
   
-  createCanvas(desiredImageSize * aspect, desiredImageSize);
+  createCanvas(windowWidth, windowHeight);
 //createCanvas(640, 480); 
   
-  image(ground, 0, 0, width, height);
+  image(ground, 0, 0, windowWidth, windowHeight);
   //now our resized image is stored in the img variable
   ground = get();
 }
